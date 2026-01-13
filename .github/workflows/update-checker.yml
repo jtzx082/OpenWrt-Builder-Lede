@@ -13,8 +13,8 @@
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt #检查源码地址
-  REPO_BRANCH: openwrt-24.10
+  REPO_URL: https://github.com/coolsnowwolf/lede.git #检查源码地址
+  REPO_BRANCH: master
 
 on:
   workflow_dispatch:
@@ -54,9 +54,9 @@ jobs:
         # 显式传递参数到 openwrt-builder.yml
         client-payload: |
           {
-            "repository_owner": "immortalwrt",
-            "repository_name": "immortalwrt",
-            "repository_branch": "openwrt-24.10"
+            "repository_owner": "lede",
+            "repository_name": "lede",
+            "repository_branch": "master"
           }
     
     - name: Delete workflow runs
